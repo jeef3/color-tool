@@ -9,7 +9,7 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "eslint src --color"
+    "lint": "eslint src --color --cache --ext .jsx,.js"
   },
   "keywords": [],
   "author": "jeffknaggs",
@@ -47,8 +47,21 @@
     }
   },
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free-solid": "^5.0.13",
+    "@fortawesome/fontawesome-svg-core": "^1.2.6",
+    "@fortawesome/react-fontawesome": "^0.1.3",
+    "color": "^3.1.0",
+    "electron-color-picker": "^0.1.0",
+    "electron-color-picker-eye-dropper-screen": "^1.0.10",
     "electron-compile": "^6.4.3",
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-devtools-installer": "^2.2.4",
+    "electron-squirrel-startup": "^1.0.0",
+    "ntcjs": "^1.1.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-hot-loader": "^4.3.11",
+    "styled-components": "^3.4.10"
   },
   "devDependencies": {
     "babel-plugin-transform-async-to-generator": "^6.24.1",
@@ -56,10 +69,12 @@
     "babel-preset-react": "^6.24.1",
     "electron-forge": "^5.2.2",
     "electron-prebuilt-compile": "3.0.2",
-    "eslint": "^3",
-    "eslint-config-airbnb": "^15",
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2",
-    "eslint-plugin-jsx-a11y": "^5",
-    "eslint-plugin-react": "^7"
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "prettier": "^1.14.3"
   }
 }
