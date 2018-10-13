@@ -1,31 +1,25 @@
 import React from 'react';
-import Color from 'color';
 import ntcjs from 'ntcjs';
 
 import ColorBox from './ColorBox';
+import Picker from './Picker';
 
 export default class App extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      currentColor: Color('#ffaa09')
+      currentColor: { hex: '#000000' }
     };
 
-    this.handleColorInputChange = this.handleColorInputChange.bind(this);
+    this.handleChangeComplete = this.handleChangeComplete.bind(this);
   }
 
   componentDidMount() {}
 
-  handleColorInputChange(e) {
-    let color;
-    try {
-      color = Color(e.target.value);
-    } catch (e) {
-      console.error(e);
-    }
-
-    this.setState({ currentColor: color || Color('black') });
+  handleChangeComplete(color) {
+    console.log('change', color);
+    this.setState({ currentColor: color });
   }
 
   render() {
@@ -33,20 +27,14 @@ export default class App extends React.Component {
 
     return (
       <div>
-        <div>
-          <input
-            type="text"
-            value={currentColor.hex()}
-            onChange={this.handleColorInputChange}
-          />
-        </div>
+        <div />
 
         <div>
-          <ColorBox color={currentColor.hex()} />
-          <div>{ntcjs.name(currentColor.hex())[1]}</div>
-          <div>{currentColor.hex().toLowerCase()}</div>
-          <div>{currentColor.rgb().string()}</div>
+          <ColorBox color={currentColor.hex} />
+          <div>{ntcjs.name(currentColor.hex)}</div>
         </div>
+
+        <Picker color={currentColor} onChange={this.handleChangeComplete} />
       </div>
     );
   }

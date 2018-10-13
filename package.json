@@ -59,6 +59,7 @@
     "electron-squirrel-startup": "^1.0.0",
     "ntcjs": "^1.1.2",
     "react": "^16.5.2",
+    "react-color": "^2.14.1",
     "react-dom": "^16.5.2",
     "react-hot-loader": "^4.3.11",
     "styled-components": "^3.4.10"
