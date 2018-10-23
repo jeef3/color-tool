@@ -19,7 +19,7 @@ export default ({ color }) => (
     <div>{ntcjs.name(color.hex)[1]}</div>
 
     <div style={{ textAlign: 'right', color: '#ccc', fontSize: 13 }}>
-      <div>{color.hex}</div>
+      <div>{color.hex.toLowerCase()}</div>
       <div>{rgba(color.rgb || { r: 0, g: 0, b: 0, a: 1 })}</div>
     </div>
   </Layout>

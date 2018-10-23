@@ -9,14 +9,14 @@ const Palettes = styled.div`
 `;
 Palettes.displayName = 'Palettes';
 
-export default ({ library }) => (
+export default ({ library, selectedSwatch, onSwatchSelected }) => (
   <div>
     {library.map(palette => (
       <div key={palette.id}>
         <div>{palette.name}</div>
         <Palettes>
-          {palette.colors.map(swatch => (
-            <div key={swatch.id}>
+          {palette.swatches.map(swatch => (
+            <div key={swatch.id} onClick={() => onSwatchSelected(swatch.id)}>
               <ColorBox color={swatch.color} />
             </div>
           ))}
