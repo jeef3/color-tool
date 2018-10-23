@@ -5,9 +5,15 @@ export default createGlobalStyle`
   body,
   #App {
     height: 100%;
+
+    font-family: Lato;
   }
 
   body {
     margin: 0;
+  }
+
+  input {
+    font-family: Lato;
   }
 `;
