@@ -2,6 +2,8 @@ import React from 'react';
 import { CustomPicker } from 'react-color';
 import { Alpha, Hue, Saturation } from 'react-color/lib/components/common';
 
+import SliderPointer from './SliderPointer';
+
 const Picker = props => (
   <div style={{ width: 150 }}>
     <div
@@ -22,7 +24,7 @@ const Picker = props => (
         marginBottom: 10
       }}
     >
-      <Hue {...props} />
+      <Hue pointer={SliderPointer} {...props} />
     </div>
     <div
       style={{
@@ -31,7 +33,7 @@ const Picker = props => (
         height: 15
       }}
     >
-      <Alpha {...props} />
+      <Alpha pointer={SliderPointer} {...props} />
     </div>
   </div>
 );
