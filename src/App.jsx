@@ -1,6 +1,7 @@
 import React from 'react';
 import tinycolor from 'tinycolor2';
 
+import GlobalStyles from './GlobalStyles';
 import AppLayout from './AppLayout';
 import ColorInfo from './ColorInfo';
 import ColorInput from './ColorInput';
@@ -95,6 +96,8 @@ export default class App extends React.Component {
 
     return (
       <AppLayout>
+        <GlobalStyles />
+
         <div>
           <div>
             <div>
