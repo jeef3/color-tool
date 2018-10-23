@@ -5,12 +5,12 @@ import { Alpha, Hue, Saturation } from 'react-color/lib/components/common';
 import SliderPointer from './SliderPointer';
 
 const Picker = props => (
-  <div style={{ width: 150 }}>
+  <div style={{ width: 200 }}>
     <div
       style={{
         position: 'relative',
         width: '100%',
-        height: 150,
+        height: 200,
         marginBottom: 10
       }}
     >
